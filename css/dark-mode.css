@@ -1,0 +1,60 @@
+
+.container {
+    display: grid;
+    justify-content:center;
+}
+
+h1{
+    color: white;
+    margin-bottom: 0rem;
+}
+
+h3 {
+    color: white;
+    font-weight: normal;
+}
+.item {
+text-align: center;
+}
+
+p{
+    color: white;
+}
+
+.extra-margin {
+ margin-top: 1rem;
+}
+
+.fab{
+ padding: 5%;
+ font-size: 30px;
+ color: gray;
+}
+/*
+.fab:hover {
+    color: black;
+}
+*/
+.fa-github:hover {
+    color:white;
+}
+
+.fa-instagram:hover {
+    color:rgb(253, 103, 198);
+}
+.fa-youtube:hover {
+    color:rgb(219, 56, 56);
+}
+
+a{
+    text-decoration: none;
+}
+hr {
+color: white;
+    width: 200px;
+
+}
+#whole-container {
+    background-color: #222222;
+}
+
