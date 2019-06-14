@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+
 #whole-container {
     background-color: #fcfcfc;
     display:grid;
@@ -17,11 +19,17 @@ justify-self: center;
     grid-row: 2/3;
 }
 h1{
+    font-family: 'Source Sans Pro', sans-serif;
     margin-bottom: 0rem;
 }
 
 h3 {
+    font-family: 'Source Sans Pro', sans-serif;
     font-weight: normal;
+}
+
+p{
+    font-family: 'Source Sans Pro', sans-serif;
 }
 .item {
 text-align: center;
@@ -39,9 +47,10 @@ text-align: center;
 }
 
 .fas {
-    font-weight: normal;
+    font-weight: lighter;
  font-size: 20px;
  color: gray;
+ font-family: 'Source Sans Pro', sans-serif;
 }
 
 .fas:hover {
