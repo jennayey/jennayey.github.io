@@ -1,9 +1,23 @@
 
+#whole-container {
+    background-color: #222222;
+    display:grid;
+    grid-template-columns:  1fr 2fr 1fr ;
+    grid-template-rows: 0.5fr 0.5fr 2fr 1fr;
+}
+
+
 .container {
     display: grid;
     justify-content:center;
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
 }
-
+.top-container{
+justify-self: center;
+    grid-column: 3/ 4;
+    grid-row: 2/3;
+}
 h1{
     color: white;
     margin-bottom: 0rem;
@@ -13,13 +27,13 @@ h3 {
     color: white;
     font-weight: normal;
 }
+p{
+    color: white;
+}
 .item {
 text-align: center;
 }
 
-p{
-    color: white;
-}
 
 .extra-margin {
  margin-top: 1rem;
@@ -30,11 +44,20 @@ p{
  font-size: 30px;
  color: gray;
 }
-/*
-.fab:hover {
-    color: black;
+
+.fas {
+    font-weight: normal;
+ font-size: 20px;
+ color: gray;
 }
-*/
+.fas:hover {
+    color: yellow;
+}
+.fab{
+    padding: 5%;
+    font-size: 30px;
+    color: gray;
+   }
 .fa-github:hover {
     color:white;
 }
@@ -50,11 +73,8 @@ a{
     text-decoration: none;
 }
 hr {
-color: white;
+    color: white;
     width: 200px;
 
-}
-#whole-container {
-    background-color: #222222;
 }
 
