@@ -144,7 +144,7 @@ and (orientation: portrait) {
     .container {
         display: grid;
         justify-content:center;
-        grid-column: 2 / 3;
+        grid-column: 1 / 5;
         grid-row: 3 / 4;
     }
     .top-container{
