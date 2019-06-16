@@ -64,7 +64,10 @@ text-align: center;
 .fa-github:hover {
     color:black;
 }
+.fa-itch-io:hover {
+    color: rgb(255, 96, 131);
 
+}
 .fa-instagram:hover {
     color:rgb(253, 103, 198);
 }
