@@ -5,16 +5,15 @@
     
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jennayey</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-   <!-- <link disabled id="dark-reader" rel="stylesheet" href="/css/dark-mode.css"> -->
-    <script src="js/main.js"></script>
+    <link id="light-reader" rel="stylesheet" type="text/css" href="css/style.css" />
+    <link id="dark-reader" rel="stylesheet" href="css/dark-mode.css">
     <!--media="screen"-->
     <script src="https://kit.fontawesome.com/b3dae74fb0.js"></script>
 </head>
 
 <body id="whole-container">
     
-        <i class="top-container fas fa-moon"> </i>
+        <i id="darkModeToggle" onlick="toggleDarkMode()" class="top-container fas fa-moon"> </i>
    
     <div class="container item-main">
         <div>
@@ -40,7 +39,7 @@
 
     </div>
 
-
+    <script src="js/main.js"></script>
 
 </body>
 
