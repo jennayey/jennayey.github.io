@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offline</title>
+    <link id="light-reader" rel="stylesheet" type="text/css" href="css/style.css" />
+    <!--media="screen"-->
+    <script src="https://kit.fontawesome.com/b3dae74fb0.js"></script>
+</head>
+
+<body id="whole-container">
+
+
+    <div class="container item-main">
+        
+
+             
+            <div class="item">
+                <img id="drawing" src="drawing.png" width="350px"alt="mydrawing">
+                <h1 id="maintext" style="color: darkgrey;">Go Offline</h1>
+
+            </div>
+           
+           
+        
+
+    </div>
+
+
+    <script>
+        const maintext = document.getElementById("maintext");
+        const drawing = document.getElementById("drawing");
+
+        if (navigator.online) {
+            maintext.textContent="Go Offline";
+    maintext.style.color="darkgrey";
+        }
+
+        window.addEventListener ("online", function(){
+            drawing.style.visibility = "hidden";
+            maintext.textContent ="Go Offline";
+            maintext.style.color="darkgrey";
+        });
+
+        window.addEventListener("offline", function(){
+           drawing.style.visibility = "visible";
+
+            maintext.textContent="Happy Birthday, Dianne!";
+            maintext.style.color="#ff99cc";
+        })
+    </script>
+
+</body>
+
+</html>

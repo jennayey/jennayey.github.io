@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
-
+#drawing {
+    visibility: hidden;
+}
 #whole-container {
     background-color: #fcfcfc;
     display:grid;
@@ -70,7 +72,7 @@ text-align: center;
 }
 .fa-instagram:hover {
     color:rgb(253, 103, 198);
-}
+}   
 .fa-youtube:hover {
     color:rgb(219, 56, 56);
 }
