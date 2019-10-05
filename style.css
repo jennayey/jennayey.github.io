@@ -1,0 +1,164 @@
+
+    
+@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+.css-selector {
+    font-family: 'Ubuntu', sans-serif;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.wrapper {
+    height: 100vh;
+    align-content: center;
+    font-family: 'Ubuntu';
+    margin: auto;
+    width:1300px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+grid-template-areas: "sidebar main";    
+}
+
+.sidebar {
+    padding: 0 40px;
+    grid-area: sidebar;
+    font-size: 20px;
+
+}
+
+.content {
+    grid-area: main;
+}
+
+.itch-card {
+    padding-bottom: 20px;
+    transform: scale(1,1);
+    transition: .5s;
+    transition-timing-function: ease-in-out;
+    
+
+}
+
+iframe {
+    border-radius: 10px;
+}
+
+.itch-card:hover {
+    transform: scale(1.03,1.03);
+    /* transform: translateY(-10px); */
+    transition-timing-function: ease-in;
+transition: .25s;
+    /* transform: translateZ(10px); */
+}
+
+.social-tag {
+    cursor: pointer;
+
+    border-radius: 20px;
+    width: 20px;
+    height:20px;
+    padding:10px;
+    transition: .2s;
+    transition-timing-function: ease-in;
+    margin: 0 5px;
+
+}
+
+.social-tag:hover.social-tag:after{
+    content: "";
+    opacity: 1;
+    width: 80px;
+}
+
+.social-tag > span {
+    opacity: 0;
+    color: white;
+    font-weight: 600;
+    opacity: 0;
+    transition: .3s;
+    padding-left: 0;
+ 
+
+}
+.social-tag:hover > span {
+    opacity: 1;
+    transition: 1s;
+    padding-left: 8px;
+}
+
+
+
+.socials{
+    display: flex;
+}
+
+
+
+/* Youtube social tag */
+.social-tag:hover.youtube> span {
+    opacity: 1;
+    transition: 1s;
+    padding-left: 10px;
+}
+
+.youtube {
+    background-color: red;
+color: white;
+}
+
+.youtube>span>a {
+    color:white;
+}
+
+.social-tag:hover.youtube{
+    opacity: 1;
+    width: 100px;
+}
+
+/* Github social tag  */
+
+.social-tag:hover.github> span {
+    opacity: 1;
+    transition: 1s;
+    padding-left: 10px;
+}
+
+.github {
+    background-color: black;
+}
+
+.github > span >a {
+    color: white;
+}
+
+
+.social-tag:hover.github{
+    opacity: 1;
+    width: 80px;
+}
+
+/* Twitter social tag  */
+
+.social-tag:hover.twitter> span {
+    opacity: 1;
+    transition: 1s;
+    padding-left: 10px;
+}
+.twitter {
+    background-color:  #1DA1F2;
+color: white;
+}
+
+.twitter>span>a {
+    color:white;
+}
+
+
+
+.social-tag:hover.twitter{
+    opacity: 1;
+    width: 85px;
+}
