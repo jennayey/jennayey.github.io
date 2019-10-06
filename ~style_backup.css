@@ -16,83 +16,163 @@ p {
   line-height: 1.5em;
 }
 .project-type {
-  display: none;
+display: none;
 }
 
+
 @media screen and (min-device-width: 320px) {
+
+
   .content-wrapper {
+    /* width: 768; */
+    /* height: 90vh; */
+    /* align-content: center; */
     margin: auto;
+    /* display: grid; */
+    /* grid-template-columns: 1fr 1fr; */
+    /* grid-template-areas: "sidebar main"; */
   }
 
-  .sidebar,
-  .main-content {
+  .sidebar, .main-content {
     padding: 0 10px;
+    /* grid-area: sidebar; */
+  
   }
+
 
   .project-card {
     background-color: #fff;
     padding: 10px 20px 20px 20px;
+    transform: scale(1, 1);
+    transition: 0.5s;
+    transition-timing-function: ease-in-out;
+    /* border-style: solid; */
     border-width: 1px;
     border-radius: 20px;
     width: inherit;
     margin-bottom: 20px;
-    box-shadow: 2px 2px 10px #e6e6e6;
+    box-shadow:    2px 2px 10px  #e6e6e6; 
   }
 
-  .project-type {
-    color: Gray;
-    display: inline-block;
+  .project-card:hover {
+    /* transform: scale(1.02, 1.02); */
+    transform: translateX(20px);
+    transition-timing-function: ease-in;
+    transition: 0.25s;
+    
+    /* transform: translateZ(10px); */
   }
+
+
+.project-type {
+  color: Gray;
+  display: inline-block;
+}
+
 
   .project-button {
-    cursor: pointer;
+cursor: pointer;
     background-color: #64b378;
-    width: fit-content;
-    padding: 10px 20px;
-    border-radius: 20px;
+  width: fit-content;
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: white;
+  font-weight: 600;
+  transition: 0.5s;
+  }
+  .project-button > a  {
     color: white;
-    font-weight: 600;
+    
   }
-  .project-button > a {
-    color: white;
-  }
-  .disabled > h2,
-  .disabled > p {
-    cursor: default;
-    color: darkgray;
-  }
+.disabled > h2 , .disabled > p{
+cursor: default;
+color: darkgray;
+}
 
-  .disabled > .project-button {
-    color: white;
-    background-color: darkgray;
-  }
+.disabled > .project-button {
+  color: white;
+  background-color: darkgray;
+}
 
   .socials {
     display: flex;
   }
-
+ 
   .social-tag {
+    cursor: pointer;
+
     border-radius: 20px;
     width: 20px;
     height: 20px;
-    padding: 10px 20px;
+    padding: 10px;
+    transition: 0.2s;
+    transition-timing-function: ease-in;
     margin: 0 5px;
-    width: fit-content;
   }
 
+
   .social-tag > span {
+    opacity: 0;
     color: white;
     font-weight: 600;
+    opacity: 0;
+    transition: 0.3s;
+    padding-left: 0;
+  }
+  
+  .social-tag:hover.social-tag:after {
+    content: "";
+    opacity: 1;
+    width: 80px;
+  }
+  
+  /* Youtube social tag */
+  .social-tag:hover.youtube > span {
+    opacity: 1;
+    transition: 1s;
+    padding-left: 12%;
   }
 
   .youtube {
     background-color: red;
   }
+
+  .social-tag:hover.youtube {
+    opacity: 1;
+  width: 100px;
+  }
+
+  /* Github social tag  */
+
+  .social-tag:hover.github > span {
+    opacity: 1;
+    transition: 1s;
+    padding-left:12%;
+  }
+
   .github {
     background-color: black;
   }
+
+  .social-tag:hover.github {
+    opacity: 1;
+    width: 80px;
+  }
+
+  /* Twitter social tag  */
+
+  .social-tag:hover.twitter > span {
+    opacity: 1;
+    transition: 1s;
+    padding-left: 10px;
+  }
   .twitter {
     background-color: #1da1f2;
+  }
+
+  .social-tag:hover.twitter {
+    opacity: 1;
+    width: 85px;
   }
 
   #footer {
@@ -100,31 +180,35 @@ p {
     align-content: center;
     grid-template-columns: 1fr 1fr;
     margin: auto;
+
+    
   }
-  .left-footer,
-  .right-footer {
+  .left-footer, .right-footer {
     padding: 0 10px;
   }
 
   .right-footer {
-    text-align: end;
+text-align: end;
   }
 }
 
+
 @media screen and (min-device-width: 768px) {
-  .sidebar,
-  .main-content {
-    padding: 0 30px;
+  .sidebar, .main-content {
+    padding: 0 40px;
     /* grid-area: sidebar; */
+  
+  }
+  .left-footer, .right-footer {
+    padding: 0 40px;
   }
 
-  .left-footer,
-  .right-footer {
-    padding: 0 30px;
-  }
+
 }
 
 @media screen and (min-device-width: 1024px) {
+
+
   .content-wrapper {
     width: 80%;
     height: 90vh;
@@ -139,65 +223,73 @@ p {
     padding: 0 40px;
     grid-area: sidebar;
     font-size: 20px;
+    
   }
 
   .main-content {
     grid-area: main;
     padding: 0 40px 0 0;
+
   }
 
   .project-card {
     background-color: #fff;
     padding: 10px 20px 20px 20px;
+    transform: scale(1, 1);
     transition: 0.5s;
     transition-timing-function: ease-in-out;
+    /* border-style: solid; */
     border-width: 1px;
     border-radius: 20px;
     width: inherit;
     margin-bottom: 20px;
-    box-shadow: 2px 2px 10px #e6e6e6;
+    box-shadow:    2px 2px 10px  #e6e6e6; 
   }
 
   .project-card:hover {
+    /* transform: scale(1.02, 1.02); */
     transform: translateX(20px);
     transition-timing-function: ease-in;
     transition: 0.25s;
-
+    
+    /* transform: translateZ(10px); */
   }
 
-  .project-type {
-    color: Gray;
-    display: inline-block;
-  }
+
+.project-type {
+  color: Gray;
+  display: inline-block;
+}
+
 
   .project-button {
-    cursor: pointer;
+cursor: pointer;
     background-color: #64b378;
-    width: fit-content;
-    padding: 10px 20px;
-    border-radius: 20px;
+  width: fit-content;
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: white;
+  font-weight: 600;
+  transition: 0.5s;
+  }
+  .project-button > a  {
     color: white;
-    font-weight: 600;
-    transition: 0.5s;
+    
   }
-  .project-button > a {
-    color: white;
-  }
-  .disabled > h2,
-  .disabled > p {
-    cursor: default;
-    color: darkgray;
-  }
+.disabled > h2 , .disabled > p{
+cursor: default;
+color: darkgray;
+}
 
-  .disabled > .project-button {
-    color: white;
-    background-color: darkgray;
-  }
+.disabled > .project-button {
+  color: white;
+  background-color: darkgray;
+}
 
   .socials {
     display: flex;
   }
-
+ 
   .social-tag {
     cursor: pointer;
 
@@ -210,6 +302,7 @@ p {
     margin: 0 5px;
   }
 
+
   .social-tag > span {
     opacity: 0;
     color: white;
@@ -218,13 +311,13 @@ p {
     transition: 0.3s;
     padding-left: 0;
   }
-
+  
   .social-tag:hover.social-tag:after {
     content: "";
     opacity: 1;
     width: 80px;
   }
-
+  
   /* Youtube social tag */
   .social-tag:hover.youtube > span {
     opacity: 1;
@@ -238,7 +331,7 @@ p {
 
   .social-tag:hover.youtube {
     opacity: 1;
-    width: 100px;
+  width: 100px;
   }
 
   /* Github social tag  */
@@ -246,7 +339,7 @@ p {
   .social-tag:hover.github > span {
     opacity: 1;
     transition: 1s;
-    padding-left: 12%;
+    padding-left:12%;
   }
 
   .github {
@@ -280,13 +373,16 @@ p {
     align-content: center;
     grid-template-columns: 1fr 1fr;
     margin: auto;
+
+    
   }
-  .left-footer,
-  .right-footer {
+  .left-footer, .right-footer {
     padding: 0 40px;
   }
 
   .right-footer {
-    text-align: end;
+text-align: end;
   }
 }
+
+
