@@ -1,164 +1,203 @@
-
-    
-@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Ubuntu&display=swap");
 .css-selector {
-    font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
+}
+body {
+  font-family: "Ubuntu";
 
+  background-color: #f5f5f5;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
+  color: black;
+}
+
+p {
+  line-height: 1.5em;
+}
+.project-type {
+display: none;
 }
 
 
-.wrapper {
-    height: 100vh;
+@media screen and (min-device-width: 1024px) {
+
+
+  .content-wrapper {
+    width: 1300px;
+    height: 90vh;
     align-content: center;
-    font-family: 'Ubuntu';
     margin: auto;
-    width:1300px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-grid-template-areas: "sidebar main";    
-}
+    grid-template-areas: "sidebar main";
+  }
 
-.sidebar {
+  .sidebar {
     padding: 0 40px;
     grid-area: sidebar;
     font-size: 20px;
-
-}
-
-.content {
-    grid-area: main;
-}
-
-.itch-card {
-    padding-bottom: 20px;
-    transform: scale(1,1);
-    transition: .5s;
-    transition-timing-function: ease-in-out;
     
+  }
 
-}
+  .main-content {
+    grid-area: main;
+    padding: 0 40px 0 0;
 
-iframe {
-    border-radius: 10px;
-}
+  }
 
-.itch-card:hover {
-    transform: scale(1.03,1.03);
-    /* transform: translateY(-10px); */
+  .project-card {
+    background-color: #fff;
+    padding: 10px 20px 20px 20px;
+    transform: scale(1, 1);
+    transition: 0.5s;
+    transition-timing-function: ease-in-out;
+    /* border-style: solid; */
+    border-width: 1px;
+    border-radius: 20px;
+    width: inherit;
+    margin-bottom: 20px;
+    box-shadow:    2px 2px 10px  #e6e6e6; 
+  }
+
+  .project-card:hover {
+    /* transform: scale(1.02, 1.02); */
+    transform: translateX(20px);
     transition-timing-function: ease-in;
-transition: .25s;
+    transition: 0.25s;
+    
     /* transform: translateZ(10px); */
+  }
+
+
+.project-type {
+  color: Gray;
+  display: inline-block;
 }
 
-.social-tag {
+
+  .project-button {
+cursor: pointer;
+    background-color: #64b378;
+  width: fit-content;
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: white;
+  font-weight: 600;
+  transition: 0.5s;
+  }
+  .project-button > a  {
+    color: white;
+    
+  }
+.disabled > h2 , .disabled > p{
+cursor: default;
+color: darkgray;
+}
+
+.disabled > .project-button {
+  color: white;
+  background-color: darkgray;
+}
+
+  .socials {
+    display: flex;
+  }
+ 
+  .social-tag {
     cursor: pointer;
 
     border-radius: 20px;
     width: 20px;
-    height:20px;
-    padding:10px;
-    transition: .2s;
+    height: 20px;
+    padding: 10px;
+    transition: 0.2s;
     transition-timing-function: ease-in;
     margin: 0 5px;
+  }
 
-}
 
-.social-tag:hover.social-tag:after{
-    content: "";
-    opacity: 1;
-    width: 80px;
-}
-
-.social-tag > span {
+  .social-tag > span {
     opacity: 0;
     color: white;
     font-weight: 600;
     opacity: 0;
-    transition: .3s;
+    transition: 0.3s;
     padding-left: 0;
- 
-
-}
-.social-tag:hover > span {
-    opacity: 1;
-    transition: 1s;
-    padding-left: 8px;
-}
-
-
-
-.socials{
-    display: flex;
-}
-
-
-
-/* Youtube social tag */
-.social-tag:hover.youtube> span {
-    opacity: 1;
-    transition: 1s;
-    padding-left: 10px;
-}
-
-.youtube {
-    background-color: red;
-color: white;
-}
-
-.youtube>span>a {
-    color:white;
-}
-
-.social-tag:hover.youtube{
-    opacity: 1;
-    width: 100px;
-}
-
-/* Github social tag  */
-
-.social-tag:hover.github> span {
-    opacity: 1;
-    transition: 1s;
-    padding-left: 10px;
-}
-
-.github {
-    background-color: black;
-}
-
-.github > span >a {
-    color: white;
-}
-
-
-.social-tag:hover.github{
+  }
+  
+  .social-tag:hover.social-tag:after {
+    content: "";
     opacity: 1;
     width: 80px;
-}
+  }
+  
+  /* Youtube social tag */
+  .social-tag:hover.youtube > span {
+    opacity: 1;
+    transition: 1s;
+    padding-left: 12%;
+  }
 
-/* Twitter social tag  */
+  .youtube {
+    background-color: red;
+  }
 
-.social-tag:hover.twitter> span {
+  .social-tag:hover.youtube {
+    opacity: 1;
+  width: 100px;
+  }
+
+  /* Github social tag  */
+
+  .social-tag:hover.github > span {
+    opacity: 1;
+    transition: 1s;
+    padding-left:12%;
+  }
+
+  .github {
+    background-color: black;
+  }
+
+  .social-tag:hover.github {
+    opacity: 1;
+    width: 80px;
+  }
+
+  /* Twitter social tag  */
+
+  .social-tag:hover.twitter > span {
     opacity: 1;
     transition: 1s;
     padding-left: 10px;
-}
-.twitter {
-    background-color:  #1DA1F2;
-color: white;
-}
+  }
+  .twitter {
+    background-color: #1da1f2;
+  }
 
-.twitter>span>a {
-    color:white;
-}
-
-
-
-.social-tag:hover.twitter{
+  .social-tag:hover.twitter {
     opacity: 1;
     width: 85px;
+  }
+
+  #footer {
+    display: grid;
+    width: 1300px;
+    align-content: center;
+    grid-template-columns: 1fr 1fr;
+    margin: auto;
+
+    
+  }
+  .left-footer, .right-footer {
+    padding: 0 40px;
+  }
+
+  .right-footer {
+text-align: end;
+  }
 }
+
+
