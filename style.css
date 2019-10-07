@@ -1,1 +1,148 @@
-.project-type{display:none}@media screen and (min-device-width:768px){.main-content,.sidebar{padding:0 30px}.left-footer,.right-footer{padding:0 30px}}@media screen and (min-device-width:1024px){.content-wrapper{width:80%;height:90vh;align-content:center;margin:auto;display:grid;grid-template-columns:1fr 1fr;grid-template-areas:"sidebar main"}.sidebar{padding:0 40px;grid-area:sidebar;font-size:20px}.main-content{grid-area:main;padding:0 40px 0 0}.project-card{transition-timing-function:ease-in;transition:.5s}.project-card:hover{transform:translateX(20px);transition-timing-function:ease-in;transition:.25s}.social-tag{cursor:pointer;border-radius:20px;width:20px;height:20px;padding:10px;transition:.2s;transition-timing-function:ease-in;margin:0 5px}.social-tag>span{opacity:0;color:#fff;font-weight:600;opacity:0;transition:.3s;padding-left:0}.social-tag:hover.social-tag:after{content:"";opacity:1;width:80px}.social-tag:hover.youtube>span{opacity:1;transition:1s;padding-left:12%}.social-tag:hover.youtube{opacity:1;width:100px}.social-tag:hover.github>span{opacity:1;transition:1s;padding-left:12%}.social-tag:hover.github{opacity:1;width:80px}.social-tag:hover.twitter>span{opacity:1;transition:1s;padding-left:10px}.social-tag:hover.twitter{opacity:1;width:85px}#footer{display:grid;width:80%;align-content:center;grid-template-columns:1fr 1fr;margin:auto}.left-footer,.right-footer{padding:0 40px}.right-footer{text-align:end}}
+  @media screen and (min-device-width: 320px) {
+  
+  @media screen and (min-device-width: 768px) {
+    .sidebar,
+    .main-content {
+      padding: 0 30px;
+      /* grid-area: sidebar; */
+    }
+  
+    .left-footer,
+    .right-footer {
+      padding: 0 30px;
+    }
+  }
+  
+  @media screen and (min-device-width: 1024px) {
+    .content-wrapper {
+      width: 80%;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "sidebar main";
+    }
+  
+    .sidebar {
+      padding: 0 40px;
+      grid-area: sidebar;
+      font-size: 20px;
+      overflow:auto;
+    }
+  
+    .main-content {
+      grid-area: main;
+      padding: 0 40px 0 0;
+    }
+  
+    .project-card {
+      transition-timing-function: ease-in;
+      transition: 0.5s;
+    }
+    .project-card:hover {
+      transform: translateX(20px);
+      transition-timing-function: ease-in;
+      transition: 0.25s;
+      
+    }
+  
+  
+    .social-tag {
+      cursor: pointer;
+  
+      border-radius: 20px;
+      width: 20px;
+      height: 20px;
+      padding: 10px;
+      transition: 0.2s;
+      transition-timing-function: ease-in;
+      margin: 0 5px;
+    }
+  
+    .social-tag > span {
+      opacity: 0;
+      color: white;
+      font-weight: 600;
+      opacity: 0;
+      transition: 0.3s;
+      padding-left: 0;
+    }
+    .social-tag:hover.social-tag:after {
+      content: "";
+      opacity: 1;
+      width: 80px;
+    }
+    /* Youtube social tag */
+    .social-tag:hover.youtube > span {
+      opacity: 1;
+      transition: 1s;
+      padding-left: 12%;
+    }
+  
+    .social-tag:hover.youtube {
+      opacity: 1;
+      width: 100px;
+    }
+  
+    /* Github social tag  */
+  
+    .social-tag:hover.github > span {
+      opacity: 1;
+      transition: 1s;
+      padding-left: 12%;
+    }
+  
+  
+  
+    .social-tag:hover.github {
+      opacity: 1;
+      width: 80px;
+    }
+  
+    /* Twitter social tag  */
+  
+    .social-tag:hover.twitter > span {
+      opacity: 1;
+      transition: 1s;
+      padding-left: 10px;
+    }
+  
+    .social-tag:hover.twitter {
+      opacity: 1;
+      width: 85px;
+    }
+
+      
+    /* Mail social tag  */
+  
+    .social-tag:hover.mail > span {
+        opacity: 1;
+        transition: 1s;
+        padding-left: 10px;
+      }
+    
+      .social-tag:hover.mail {
+        opacity: 1;
+        width: 80px;
+      }
+  
+
+
+
+  
+    #footer {
+      display: grid;
+      width: 80%;
+      align-content: center;
+      grid-template-columns: 1fr 1fr;
+      margin: auto;
+    }
+    .left-footer,
+    .right-footer {
+      padding: 0 40px;
+    }
+  
+    .right-footer {
+      text-align: end;
+    }
+  }
+  
