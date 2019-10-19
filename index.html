@@ -12,7 +12,7 @@ Home
       @import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
       Pre,code{ 
           
-        font-size: 1.5rem;
+        font-size: 1.2rem;
 opacity: .9;
 
       }
@@ -61,6 +61,7 @@ body {
   background: #303030;
   color: whitesmoke;
 
+
 }
 
 p::selection {
@@ -93,7 +94,7 @@ padding: 20px 0;
 }
 
 .plain-text   {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     line-height: 1.5em;
      
 }
@@ -101,20 +102,40 @@ padding: 20px 0;
     width: inherit;
     margin: 0 auto;
     padding: 5%;
+    position: relative;
+    min-height: 90vh;
+}
+
+.content {
+    padding-bottom: 10%;
+}
+
+.footer {
+    position:absolute;
+
+    bottom:0;
+    width: 100%;
+    padding-bottom:10px;
 }
             @media screen and (min-device-width: 1024px) {
+           
                 .container { 
                     margin: 0 auto;
                     width: 50%;
                     padding: 5%;
+min-height: 70vh;
+           
+                }
+                .plain-text   {
+    font-size: 1.3rem;
 
-                    
                 }
 
                 .page {
     padding: 20px 20px 20px 0;
-    font-size: 1.5rem;
-    line-height: 1.5em;
+    line-height: 1.5rem;
+    font-size: 1.3rem;
+
     transition: ease-out;
     transition-duration: .2s;
     border-radius: 20px;
@@ -136,31 +157,32 @@ padding: 20px 0;
             </style>
 </head>
 <div class="container">
-    <div class="header">
+  <div class="content">
+        <div class="header">
         <a class="about" href="/">About</a>
         <a class="posts" href="/posts/">Blog</a>
     
     </div> 
       
-  <div class="title-text"> 
-    </div> 
-
-
-    <div class="details-text">
-        </div>
-        <br>
-        <p>
-
-
-
-
-        </p>
-        <p>
-
-            
-        </p>
-<div class="plain-text">
-    
+        <div class="title-text"> 
+          </div> 
+      
+      
+          <div class="details-text">
+              </div>
+              <br>
+              <p>
+      
+      
+      
+      
+              </p>
+              <p>
+      
+                  
+              </p>
+      <div class="plain-text">
+          
 
 
 <div class="title-text">
@@ -180,9 +202,17 @@ Hi, I'm Jenna.
 
 
 </div>
-  
+        
+      
+  </div>
+    <div class="footer">
 
-
+            © Jennaleigh C. Angala, 2019    
+    
+    </div>
+    
 </div>
+
+
 </body>
 </html>
