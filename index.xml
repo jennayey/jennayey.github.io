@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Home on My New Hugo Site</title>
-    <link>http://example.org/</link>
+    <link>http://jennayey.com/</link>
     <description>Recent content in Home on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 13 Oct 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://jennayey.com/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Basic Hugo Commands</title>
-      <link>http://example.org/posts/center-css/</link>
+      <link>http://jennayey.com/posts/center-css/</link>
       <pubDate>Sat, 19 Oct 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/posts/center-css/</guid>
+      <guid>http://jennayey.com/posts/center-css/</guid>
       <description>Hugo  is an open-source static site generator that has a very flexible templating system. I created this site with Hugo with a custom theme and hosted it with Github Pages. I&amp;rsquo;ve listed the most frequent hugo commands you&amp;rsquo;ll be using while building your website. Creating a new Hugo site This is the first Hugo command you&amp;rsquo;ll type. 1  hugo new site site-name   This will create a new Hugo site complete with all the folder structure.</description>
     </item>
     
