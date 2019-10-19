@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>
+CSS animations basic
+</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+      Pre,code{ 
+          
+        font-size: 1.5rem;
+opacity: .9;
+
+      }
+
+      .header {
+          display: grid;
+          grid-template-columns: 100px 100px;
+    grid-template-areas: "about posts";
+    font-size: 1.5rem;
+
+      }
+
+      .header>p:hover {
+       color: rgb(255, 255, 53);
+       transition-duration: 1s;
+       transition: ease-in;
+      }
+
+.page:hover {
+    background: rgba(63, 67, 88, 0.5);
+    padding-left: 20px;
+    transition: ease-in;
+    transition-duration: .2s;
+    
+}
+.page {
+    padding: 20px 20px 20px 0;
+    font-size: 1.2rem;
+    line-height: 1.5em;
+
+}
+
+a{
+    text-decoration: none;
+    color:whitesmoke;
+    font-weight: bold;
+
+}
+
+a:hover{
+    color:rgb(255, 255, 53);
+
+}
+body {
+  font-family: "Ubuntu";
+  background: #303030;
+  color: whitesmoke;
+
+}
+
+p::selection {
+    background-color: rgb(255, 255, 53);
+    color: black;
+}
+
+hr {
+    border-color: rgb(177, 187, 221);
+}
+
+.title-text{
+color: whitesmoke;
+font-size: 3rem;
+font-weight: 700;
+padding: 20px 0;
+}
+.subtitle-text {
+    font-weight: 700;
+    color:whitesmoke;
+
+    font-size: 1.7rem;
+
+}
+
+.details-text{
+    font-size: 1.0rem;
+
+     
+}
+
+.plain-text   {
+    font-size: 1.3rem;
+    line-height: 1.5em;
+     
+}
+.container {
+    width: inherit;
+    margin: 0 auto;
+    padding: 5%;
+}
+            @media screen and (min-device-width: 1024px) {
+                .container { 
+                    margin: 0 auto;
+                    width: 50%;
+                    padding: 5%;
+
+                    
+                }
+
+                .page {
+    padding: 20px 20px 20px 0;
+    font-size: 1.5rem;
+    line-height: 1.5em;
+    transition: ease-out;
+    transition-duration: .2s;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-areas: "title date";
+
+}
+.list-title {
+    grid-area: title;
+}
+
+.list-date {
+    grid-area: date;
+    text-align: right;
+}
+        
+            }
+            </style>
+</head>
+<div class="container">
+    <div class="header">
+        <a class="about" href="/">About</a>
+        <a class="posts" href="/posts/">Blog</a>
+    
+    </div> 
+      
+  <div class="title-text"> 
+<div style="padding-top: 65px;">
+        CSS animations basic
+
+</div>
+</div> 
+
+
+    <div class="details-text">
+Oct 13, 2019
+</div>
+        <br>
+        <p>
+
+
+
+
+        </p>
+        <p>
+
+            
+        </p>
+<div class="plain-text">
+    
+
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">.<span style="color:#a6e22e">page</span>:<span style="color:#a6e22e">hover</span> {
+    <span style="color:#a6e22e">background</span>: <span style="color:#a6e22e">rgb</span>(<span style="color:#ae81ff">52</span>, <span style="color:#ae81ff">52</span>, <span style="color:#ae81ff">68</span>);
+    <span style="color:#a6e22e">padding</span><span style="color:#f92672">-</span><span style="color:#a6e22e">left</span>: <span style="color:#ae81ff">20</span><span style="color:#a6e22e">px</span>;
+    <span style="color:#a6e22e">transition</span>: <span style="color:#a6e22e">ease</span><span style="color:#f92672">-</span><span style="color:#a6e22e">in</span>;
+    <span style="color:#a6e22e">transition</span><span style="color:#f92672">-</span><span style="color:#a6e22e">duration</span>: <span style="color:#ae81ff">.2</span><span style="color:#a6e22e">s</span>;
+    
+}</code></pre></td></tr></table>
+</div>
+</div>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+
+</div>
+  
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>
+Basic Hugo Commands
+</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+      Pre,code{ 
+          
+        font-size: 1.5rem;
+opacity: .9;
+
+      }
+
+      .header {
+          display: grid;
+          grid-template-columns: 100px 100px;
+    grid-template-areas: "about posts";
+    font-size: 1.5rem;
+
+      }
+
+      .header>p:hover {
+       color: rgb(255, 255, 53);
+       transition-duration: 1s;
+       transition: ease-in;
+      }
+
+.page:hover {
+    background: rgba(63, 67, 88, 0.5);
+    padding-left: 20px;
+    transition: ease-in;
+    transition-duration: .2s;
+    
+}
+.page {
+    padding: 20px 20px 20px 0;
+    font-size: 1.2rem;
+    line-height: 1.5em;
+
+}
+
+a{
+    text-decoration: none;
+    color:whitesmoke;
+    font-weight: bold;
+
+}
+
+a:hover{
+    color:rgb(255, 255, 53);
+
+}
+body {
+  font-family: "Ubuntu";
+  background: #303030;
+  color: whitesmoke;
+
+}
+
+p::selection {
+    background-color: rgb(255, 255, 53);
+    color: black;
+}
+
+hr {
+    border-color: rgb(177, 187, 221);
+}
+
+.title-text{
+color: whitesmoke;
+font-size: 3rem;
+font-weight: 700;
+padding: 20px 0;
+}
+.subtitle-text {
+    font-weight: 700;
+    color:whitesmoke;
+
+    font-size: 1.7rem;
+
+}
+
+.details-text{
+    font-size: 1.0rem;
+
+     
+}
+
+.plain-text   {
+    font-size: 1.3rem;
+    line-height: 1.5em;
+     
+}
+.container {
+    width: inherit;
+    margin: 0 auto;
+    padding: 5%;
+}
+            @media screen and (min-device-width: 1024px) {
+                .container { 
+                    margin: 0 auto;
+                    width: 50%;
+                    padding: 5%;
+
+                    
+                }
+
+                .page {
+    padding: 20px 20px 20px 0;
+    font-size: 1.5rem;
+    line-height: 1.5em;
+    transition: ease-out;
+    transition-duration: .2s;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-areas: "title date";
+
+}
+.list-title {
+    grid-area: title;
+}
+
+.list-date {
+    grid-area: date;
+    text-align: right;
+}
+        
+            }
+            </style>
+</head>
+<div class="container">
+    <div class="header">
+        <a class="about" href="/">About</a>
+        <a class="posts" href="/posts/">Blog</a>
+    
+    </div> 
+      
+  <div class="title-text"> 
+<div style="padding-top: 65px;">
+        Basic Hugo Commands
+
+</div>
+</div> 
+
+
+    <div class="details-text">
+Oct 19, 2019
+</div>
+        <br>
+        <p>
+
+
+
+
+        </p>
+        <p>
+
+            
+        </p>
+<div class="plain-text">
+    
+
+
+<p><a href="https://gohugo.io">Hugo </a> is an open-source static site generator that has a very flexible templating system. I created this site with Hugo with a custom theme and hosted it with Github Pages. I&rsquo;ve listed the most frequent hugo commands you&rsquo;ll be using while building your website.
+<br>
+<br>
+<h2>Creating a new Hugo site</h2>
+This is the first Hugo command you&rsquo;ll type. <br><br>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">hugo</span> <span style="color:#a6e22e">new</span> <span style="color:#a6e22e">site</span> <span style="color:#a6e22e">site</span><span style="color:#f92672">-</span><span style="color:#a6e22e">name</span></code></pre></td></tr></table>
+</div>
+</div>
+<br>
+This will create a new Hugo site complete with all the folder structure. This new Hugo site will not contain any content or themes yet, you can add them using the <code>hugo new</code> command (see below).
+<br>
+<br></p>
+
+<p><h2>Creating new Markdown files</h2>
+Markdown files are one of the Hugo files you&rsquo;ll be creating frequently, especially if your Hugo site will have a lot of content or pages. To create a new hugo markdown file: <br>
+<br>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">hugo</span> <span style="color:#a6e22e">new</span> <span style="color:#a6e22e">post1</span>.<span style="color:#a6e22e">md</span></code></pre></td></tr></table>
+</div>
+</div></p>
+
+<p>And there you go, a new markdown file was created under your <code>content</code> folder. Markdown files created via Hugo CLI already includes the <code>front-matter</code> defaults you&rsquo;ve set in your <code>default.md</code> file. The new Markdown files are generated in your <code>content</code> folder by default. But if you want to further arrange your files into subfolders, just add your the name of your subfolder right before the markdown file name.
+<br>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">hugo</span> <span style="color:#a6e22e">new</span> <span style="color:#a6e22e">subfolder</span><span style="color:#f92672">-</span><span style="color:#a6e22e">name</span><span style="color:#f92672">/</span><span style="color:#a6e22e">post1</span>.<span style="color:#a6e22e">md</span></code></pre></td></tr></table>
+</div>
+</div>
+<br>
+<code>folder-name</code> is the name of the folder under your <code>content</code> folder.
+<br>
+<br>
+<h2>Running the Hugo Server</h2>
+If you&rsquo;re familiar with Visual Studio Code&rsquo;s live server, hugo has it&rsquo;s own command for running it&rsquo;s server. To preview your website onto your browser:</p>
+
+<p><div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">hugo</span> <span style="color:#a6e22e">server</span></code></pre></td></tr></table>
+</div>
+</div>
+<br>
+Your web server will now be available to view on your browser at <code>http://localhost:1313/</code>. Hugo automatically refreshes your website with updated content while you&rsquo;re editing it, no need to refresh your browser or re-run the <code>hugo server</code> command. To stop the server, return to the terminal and press the keyboard shortcut  <code>ctrl+c</code>.</p>
+
+<p>When running the server, Hugo will only show and build pages that aren&rsquo;t drafts. Posts / files with dates set in the future won&rsquo;t be showed or generated by Hugo as well. Only files dated today and older are built and shown. If you want to preview draft pages in the server. You just need to add <code>-D</code> at the end of the command.</p>
+
+<p><div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">hugo</span> <span style="color:#a6e22e">server</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">D</span></code></pre></td></tr></table>
+</div>
+</div>
+<br>
+If you do want to view the future dated files:</p>
+
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">hugo</span> <span style="color:#a6e22e">server</span> <span style="color:#f92672">--</span><span style="color:#a6e22e">buildFuture</span></code></pre></td></tr></table>
+</div>
+</div>
+
+<p><br>
+<h2>Bulding your Hugo site</h2>
+If you are done editing, testing and creating your Hugo website, it&rsquo;s time to build and generate your website files for publishing. This can be done with the command:<br><br>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">hugo</span></code></pre></td></tr></table>
+</div>
+</div>
+<br>
+Hugo will generate your website files under the <code>public</code> folder of your Hugo project folder. You can now transfer your files and publish your website.</p>
+
+
+</div>
+  
+
+
+</div>
+</body>
+</html>
