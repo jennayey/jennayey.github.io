@@ -96,6 +96,7 @@ padding: 20px 0;
 }
 .disabled-text {
     color: #6a696d;
+    text-align: center;
 
 }
 .details-text{
@@ -132,7 +133,7 @@ padding: 20px 0;
     padding: 30px;
     background-color: white;
     transition: 0.25s;
-    margin: 10px 20px 10px 0px;
+    margin: 10px;
 
 
 }
@@ -144,6 +145,8 @@ padding: 20px 0;
       border-radius: 20px;
       color: white;
       font-weight: 600;
+     
+
     }
     .project-button>a {
       color: white;
@@ -170,6 +173,25 @@ padding: 20px 0;
     .personal-description-icon{
         display: none;
     }
+
+    @media screen and (min-device-width: 768px) {
+
+      .disabled-text{
+  text-align: left;
+}
+.project-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr  ;
+ 
+}
+
+.project-card {
+
+    margin: 10px 20px 10px 0px;
+
+
+
+    }
             @media screen and (min-device-width: 1024px) {
            
                 .container { 
@@ -183,7 +205,9 @@ min-height: 70vh;
     font-size: 1.3rem;
 
                 }
-
+.disabled-text{
+  text-align: left;
+}
                 .page {
     padding: 20px 20px 20px 0;
     line-height: 1.5rem;
@@ -212,9 +236,11 @@ min-height: 70vh;
 }
 .personal-description-text {
     grid-area: text;
+    padding-left: 50px;
 }
 
 .personal-description-icon {
+  display: block;
     grid-area: icon;
     width: 200px;
 }
@@ -229,6 +255,7 @@ min-height: 70vh;
     padding: 30px;
     background-color: white;
     transition: 0.25s;
+    margin: 10px 20px 10px 0px;
 
 
 }
@@ -516,7 +543,7 @@ Designed UX and UI for the Waray Learning App</div>
 
 <div class="project-group margin-tb">
 <div class="subtitle-text disabled-text">
-Animations and Video Editing
+Animation and Video Editing
 
 </div>
 
