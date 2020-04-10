@@ -252,7 +252,7 @@ flex-grow: 1;  /* max-width: 50%; */
 and (max-device-width:1024px)
 and (-webkit-min-device-pixel-ratio: 1) { 
   body {
-    width: 90vw;
+    width: 85vw;
   }
 .project {
   flex-basis:  100%;
@@ -267,7 +267,7 @@ and (-webkit-min-device-pixel-ratio: 1) {
 
   body {
     padding-top: 50px;
-    width: 90vw;
+    width: 85vw;
     margin: auto;
     /* background-color: rgb(239, 245, 247); */
     background-color: #fff;
@@ -296,26 +296,26 @@ and (-webkit-min-device-pixel-ratio: 1) {
       text-decoration: none;
   }
   h1 {
-    font-size: 2.3em;
+    font-size: 1.8em;
   }
   
   h2 {
-    font-size: 2em;
+    font-size: 1.6em;
   }
   h3 {
-    font-size: 1.7em;
+    font-size: 1.3em;
   }
   h4 {
-    font-size: 1.4em;
+    font-size: 1.1em;
   }
   
-  h5 {
-    font-size: 1.3em;
+  h5, a {
+    font-size: 1em;
   }
   p {
-    font-size: 1.3em;
+    font-size: 1em;
     font-weight: 100;
-    line-height: 1.3em;
+    line-height: 1.2em;
     margin-bottom:  20px;
   }
 
@@ -323,7 +323,7 @@ and (-webkit-min-device-pixel-ratio: 1) {
 
 .main-info-text {
   flex-basis: 100%;
-  padding:0 40px;
+  padding:0 100px;
   text-align: center;
 }
 
@@ -370,6 +370,8 @@ svg {
  transition-duration: .2s;
 flex-basis:100%;
 margin-bottom: 20px;
+margin-right: 0px;
+
  
 }
 
@@ -393,6 +395,10 @@ margin-bottom: 20px;
   margin-right: 0px;
 }
 
+.primary-button h5, .secondary-button h5{
+  padding: 15px 20px;
+}
+
 }
 
 
@@ -402,7 +408,7 @@ and (-webkit-min-device-pixel-ratio: 1) {
 
   body {
     padding-top: 50px;
-    width: 90vw;
+    width: 85vw;
     margin: auto;
     /* background-color: rgb(239, 245, 247); */
     background-color: #fff;
@@ -430,36 +436,35 @@ and (-webkit-min-device-pixel-ratio: 1) {
   a {
       text-decoration: none;
   }
+
   h1 {
-    font-size: 2.3em;
+    font-size: 1.8em;
   }
   
   h2 {
-    font-size: 2em;
+    font-size: 1.6em;
   }
   h3 {
-    font-size: 1.7em;
+    font-size: 1.3em;
   }
   h4 {
-    font-size: 1.4em;
+    font-size: 1.1em;
   }
   
-  h5 {
-    font-size: 1.3em;
+  h5, a {
+    font-size: 1em;
   }
   p {
-    font-size: 1.3em;
+    font-size: 1em;
     font-weight: 100;
-    line-height: 1.3em;
+    line-height: 1.2em;
     margin-bottom:  20px;
   }
-
-
 
 .main-info-text {
   flex-basis: 100%;
   text-align: center;
-  padding:0px;
+  padding: 0px;
 }
 
 .main-info-icon {
@@ -505,6 +510,8 @@ svg {
  transition-duration: .2s;
 flex-basis:100%;
 margin-bottom: 20px;
+margin-right: 0px;
+
  
 }
 
@@ -512,6 +519,8 @@ margin-bottom: 20px;
  display: inline-block;
  
 }
+
+
 
 .button-container{
   display: flex;
@@ -524,4 +533,7 @@ margin-bottom: 20px;
   margin-right: 0px;
 }
 
+.primary-button h5, .secondary-button h5{
+  padding: 15px 20px;
+}
 }
