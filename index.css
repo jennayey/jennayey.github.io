@@ -1,0 +1,527 @@
+@import url("https://fonts.googleapis.com/css?family=Ubuntu&display=swap");
+* {
+  margin: 0;
+}
+body {
+  padding-top: 100px;
+  width: 70vw;
+  margin: auto;
+  /* background-color: rgb(239, 245, 247); */
+  background-color: #fff;
+  font-family: "Ubuntu";
+  color: rgb(18, 13, 75);
+  overflow-x: hidden;
+
+  
+}
+footer {
+  margin: 20px 0px;
+}
+
+::selection {
+  background: yellow;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2.5em;
+}
+h3 {
+  font-size: 2em;
+}
+h4 {
+  font-size: 1.7em;
+}
+
+h5 {
+  font-size: 1.3em;
+}
+p {
+  font-size: 1.5em;
+  font-weight: 100;
+  line-height: 1.3em;
+  margin-bottom: 30px;
+}
+
+.orangefix-link {
+  color: #fe5000;
+ 
+}
+
+.main-info {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+margin-bottom: 50px;
+ 
+
+}
+
+.main-info-text {
+  flex-basis: 60%;
+  padding-right: 50px;
+}
+
+
+.main-info-icon {
+
+}
+.main-info-icon div {
+  display: inline-block;
+}
+
+.button-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.primary-button {
+    margin-right: 20px;
+}
+.primary-button h5 {
+  color: white;
+  padding: 15px 30px;
+  background-color: #fc8a05;
+  border: 3px;
+  border-style: solid;
+  border-color: #fc8a05;
+  border-radius: 5px;
+  transition-timing-function: ease-out;
+transition-duration: .5s;
+
+  
+}
+
+.primary-button h5:hover {
+  transition-timing-function: ease-out;
+transition-duration: .5s;
+background-color: #fc7405;
+border-color: #fc7405;
+transform: translateY(-5px);
+
+}
+
+.secondary-button h5 {
+  color: #fc8a05;
+  padding: 15px 30px;
+  border: 3px;
+  border-style: solid;
+  border-color: #fc8a05;
+  border-radius: 5px;
+}
+
+.secondary-button h5:hover{
+  transition-timing-function: ease-out;
+  transition-duration: .5s;
+  border-color: #fc7405;
+  color: #fc7405;
+  transform: translateY(-5px);
+
+}
+
+.tertiary-button h5 {
+color: #8d8d8d;  padding: 15px 30px;
+  background-color: #fff;
+  border: 1px;
+  border-style: solid;
+  border-color: #c9c9c9;
+  border-radius: 5px;
+  transition-timing-function: ease-out;
+transition-duration: .5s;
+}
+
+
+.svg-icon-container {
+  margin:auto;
+  overflow: hidden;
+  width: 250px;
+  height: 250px;
+  background-color: gray;
+  border: 3px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 200px;
+}
+
+svg {
+  width: 250px;
+  height: 250px;
+  position: relative;
+  top: 30px !important;
+  overflow: visible;
+  /* stroke: #fc8a05; */
+  /* display: inline-block; */
+}
+
+
+.projects-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: center;
+
+}
+
+.project {
+  border: 1px;
+  border-style: solid;
+  border-color: rgb(204, 204, 204);
+  border-radius: 5px;
+  /* width: 100%; */
+  /* max-width: 50%; */
+  margin-right: 20px;
+  padding: 30px 40px;
+ background-color: white;
+ transition-duration: .2s;
+/* flex-basis:45%; */
+flex-grow: 1;
+margin-bottom: 20px;
+ 
+}
+
+.project:hover {
+  box-shadow: 0px 3px 21px -3px rgba(199,199,199,1);
+  transition-duration: .25s;
+
+
+}
+
+.button-container .tertiary-button h5 {
+  transition-timing-function: ease-out;
+  transition-duration: .5s;
+  }
+.button-container:hover .tertiary-button h5{
+transform: translateY(-5px);
+transition-timing-function: ease-out;
+transition-duration: .5s;
+
+}
+
+.button-container:hover .tertiary-button h5{
+
+  border-color: rgb(18, 13, 75);
+  color: rgb(18, 13, 75);
+
+  
+  }
+
+
+  /* /media-queries/ */
+
+  @media screen 
+  and (max-device-width:2560px)
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    body{
+      width: 60vw;
+    }
+  .project {
+  flex-grow: 1;  /* max-width: 50%; */
+  }
+  }
+
+@media screen 
+and (max-device-width:1440px)
+and (-webkit-min-device-pixel-ratio: 1) { 
+  body{
+    width: 90vw;
+  }
+.project {
+flex-grow: 1;  /* max-width: 50%; */
+}
+}
+@media screen 
+and (max-device-width:1024px)
+and (-webkit-min-device-pixel-ratio: 1) { 
+  body {
+    width: 90vw;
+  }
+.project {
+  flex-basis:  100%;
+  max-width: 100%;
+}
+}
+
+
+@media screen 
+and (max-device-width:768px)
+and (-webkit-min-device-pixel-ratio: 1) { 
+
+  body {
+    padding-top: 50px;
+    width: 90vw;
+    margin: auto;
+    /* background-color: rgb(239, 245, 247); */
+    background-color: #fff;
+    font-family: "Ubuntu";
+    color: rgb(18, 13, 75);
+    overflow-x: hidden;
+  
+    
+  }
+  
+  ::selection {
+    background: yellow;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  a {
+      text-decoration: none;
+  }
+  h1 {
+    font-size: 2.3em;
+  }
+  
+  h2 {
+    font-size: 2em;
+  }
+  h3 {
+    font-size: 1.7em;
+  }
+  h4 {
+    font-size: 1.4em;
+  }
+  
+  h5 {
+    font-size: 1.3em;
+  }
+  p {
+    font-size: 1.3em;
+    font-weight: 100;
+    line-height: 1.3em;
+    margin-bottom:  20px;
+  }
+
+
+
+.main-info-text {
+  flex-basis: 100%;
+  padding:0 40px;
+  text-align: center;
+}
+
+.main-info-icon {
+  order: -1;
+text-align: center;
+}
+
+.main-info-icon{
+flex-basis: 100%;
+margin-bottom: 20px;
+}
+
+.svg-icon-container {
+  margin:auto;
+  overflow: hidden;
+  width: 200px;
+  height: 200px;
+  background-color: gray;
+  border: 3px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 200px;
+}
+
+svg {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  top: 20px !important;
+  overflow: visible;
+  /* stroke: #fc8a05; */
+  /* display: inline-block; */
+}
+
+.project {
+  border: 1px;
+  border-style: solid;
+  border-color: rgb(204, 204, 204);
+  border-radius: 5px;
+  /* width: 100%; */
+  padding: 30px 20px 15px 20px;
+ background-color: white;
+ transition-duration: .2s;
+flex-basis:100%;
+margin-bottom: 20px;
+ 
+}
+
+.project .button-container{
+ display: inline-block;
+ 
+}
+
+.button-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#talk-button {
+  margin-right: 20px;
+}
+
+
+.primary-button {
+  margin-right: 0px;
+}
+
+}
+
+
+@media screen 
+and (max-device-width:425px)
+and (-webkit-min-device-pixel-ratio: 1) { 
+
+  body {
+    padding-top: 50px;
+    width: 90vw;
+    margin: auto;
+    /* background-color: rgb(239, 245, 247); */
+    background-color: #fff;
+    font-family: "Ubuntu";
+    color: rgb(18, 13, 75);
+    overflow-x: hidden;
+  
+    
+  }
+  
+  ::selection {
+    background: yellow;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  a {
+      text-decoration: none;
+  }
+  h1 {
+    font-size: 2.3em;
+  }
+  
+  h2 {
+    font-size: 2em;
+  }
+  h3 {
+    font-size: 1.7em;
+  }
+  h4 {
+    font-size: 1.4em;
+  }
+  
+  h5 {
+    font-size: 1.3em;
+  }
+  p {
+    font-size: 1.3em;
+    font-weight: 100;
+    line-height: 1.3em;
+    margin-bottom:  20px;
+  }
+
+
+
+.main-info-text {
+  flex-basis: 100%;
+  text-align: center;
+  padding:0px;
+}
+
+.main-info-icon {
+  order: -1;
+text-align: center;
+}
+
+.main-info-icon{
+flex-basis: 100%;
+margin-bottom: 20px;
+}
+
+.svg-icon-container {
+  margin:auto;
+  overflow: hidden;
+  width: 200px;
+  height: 200px;
+  background-color: gray;
+  border: 3px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 200px;
+}
+
+svg {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  top: 20px !important;
+  overflow: visible;
+  /* stroke: #fc8a05; */
+  /* display: inline-block; */
+}
+
+.project {
+  border: 1px;
+  border-style: solid;
+  border-color: rgb(204, 204, 204);
+  border-radius: 5px;
+  /* width: 100%; */
+  padding: 30px 20px 15px 20px;
+ background-color: white;
+ transition-duration: .2s;
+flex-basis:100%;
+margin-bottom: 20px;
+ 
+}
+
+.project .button-container{
+ display: inline-block;
+ 
+}
+
+.button-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+
+.primary-button {
+  margin-right: 0px;
+}
+
+}

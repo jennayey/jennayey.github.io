@@ -1,661 +1,319 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta name="generator" content="Hugo 0.59.1" />
-    
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-149598689-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <head>
+    <script
+      aasync
+      src="https://www.googletagmanager.com/gtag/js?id=UA-149598689-1"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="index.css" />
 
-  gtag('config', 'UA-149598689-1');
-</script>
+    <script src="animation.js"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      gtag("config", "UA-149598689-1");
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>
-Jennaleigh C. Angala - UX/UI Designer
-</title>
-    <style>
-      @import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
-      Pre,code{ 
-          
-        font-size: 1.2rem;
-opacity: .9;
+      Jennaleigh C. Angala - UX/UI Designer
+    </title>
+  </head>
+  <body>
+    <div class="main-info">
+      <div class="main-info-text">
+        <h1 id="myName">
+          Jennaleigh C. Angala
+        </h1>
+        <p id="myDescription">
+          Currently working on cool stuff at
+          <span>
+            <a
+              class="orangefix-link"
+              href="https://orangefix.xyz"
+              target="_blank"
+              >Orangefix</a
+            ></span
+          >
+          and <wbr />creating more cool stuff at my free time.
+        </p>
 
-      }
+        <div  class="button-container">
+          <a id="talk-button" class="primary-button" href="mailto:hello@jennayey.com">
+            <div>
+              <h5>Let's talk!</h5>
+            </div>
+          </a>
+          <a
+            id="cv-button"
+            class="secondary-button"
+            href="jennaleigh-angala-2019.pdf"
+            download
+          >
+            <div>
+              <h5>View my CV</h5>
+            </div>
+          </a>
+        </div>
+      </div>
 
-      .header {
-          display: grid;
-          grid-template-columns: 100px 100px;
-    grid-template-areas: "about posts";
-    font-size: 1.5rem;
-
-      }
-
-      .header>p:hover {
-       color: rgb(255, 255, 53);
-       transition-duration: 1s;
-       transition: ease-in;
-      }
-
-.page:hover {
-    background: rgba(233, 233, 233, 0.5);
-    padding-left: 20px;
-    transition: ease-in;
-    transition-duration: .2s;
-    
-}
-.page {
-    padding: 20px 20px 20px 0;
-    font-size: 1.2rem;
-    line-height: 1.5em;
-
-}
-
-a{
-    text-decoration: none;
-    color: #211f2c;
-font-weight: bold;
-}
-
-a:hover{
-    color: #ffbb00;
-}
-body {
-  font-family: "Ubuntu";
-  color: #211f2c;
-  background-color: whitesmoke;
-
-
-}
-
-p::selection {
-    background-color: rgb(158, 0, 206);
-    color: white;
-}
-
-hr {
-    border-color: rgb(177, 187, 221);
-}
-
-.title-text{
-    color: #211f2c;
-font-size: 3rem;
-font-weight: 700;
-padding: 20px 0;
-}
-.subtitle-text {
-    font-weight: 700;
-    color: #211f2c;
-
-    font-size: 1.7rem;
-
-}
-.disabled-text {
-    color: #6a696d;
-    text-align: center;
-
-}
-.details-text{
-    font-size: 1.0rem;
-
-     
-}
-
-.plain-text   {
-    font-size: 1.2rem;
-    line-height: 1.5em;
-     
-}
-.container {
-    margin: 0 auto;
-    padding: 5%;
-    position: relative;
-    min-height: 90vh;
-}
-
-.content {
-    padding-bottom: 10%;
-}
-
-.footer {
-    position:absolute;
-
-    bottom:0;
-    padding-bottom:10px;
-}
-
-.project-card {
-    border-radius: 20px;
-    padding: 30px;
-    background-color: white;
-    transition: 0.25s;
-    margin: 10px;
-
-
-}
-.project-button {
-      cursor: pointer;
-      background-color: #64b378;
-      width: fit-content;
-      padding: 5px 20px;
-      border-radius: 20px;
-      color: white;
-      font-weight: 600;
-     
-
-    }
-    .project-button>a {
-      color: white;
-    
-    }
-
-    .margin-tb {
-        margin-top: 20px;
-    }
-
-    .games-button {
-        background-color: rgb(248, 135, 59);
-    }
-
-    .ux-button {
-        background-color: rgb(59, 119, 248);
-
-    }
-
-    .anim-button {
-        background-color: rgb(105, 62, 204);
-    }
-
-    .personal-description-icon{
-        display: none;
-    }
-
-    @media screen and (min-device-width: 768px) {
-
-      .disabled-text{
-  text-align: left;
-}
-    
-.project-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr  ;
- 
-}
-
-.project-card {
-
-    margin: 10px 20px 10px 0px;
-
-    }
-}            @media screen and (min-device-width: 1024px) {
-           
-                .container { 
-                    margin: 0 auto;
-                    width: 70%;
-                    padding: 5%;
-min-height: 70vh;
-           
-                }
-                .plain-text   {
-    font-size: 1.3rem;
-
-                }
-.disabled-text{
-  text-align: left;
-}
-                .page {
-    padding: 20px 20px 20px 0;
-    line-height: 1.5rem;
-    font-size: 1.3rem;
-
-    transition: ease-out;
-    transition-duration: .2s;
-    border-radius: 20px;
-    display: grid;
-    grid-template-columns: 60% 40%;
-    grid-template-areas: "title date";
-
-}
-.list-title {
-    grid-area: title;
-}
-
-.list-date {
-    grid-area: date;
-    text-align: right;
-}
-        .personal-description {
-    display: grid;
-    grid-template-columns: 30% 70%;
-    grid-template-areas: "icon text";
-}
-.personal-description-text {
-    grid-area: text;
-    padding-left: 50px;
-}
-
-.personal-description-icon {
-  display: block;
-    grid-area: icon;
-    width: 200px;
-}
-.project-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
- 
-}
-
-.project-card {
-    border-radius: 20px;
-    padding: 30px;
-    background-color: white;
-    transition: 0.25s;
-    margin: 10px 20px 10px 0px;
-
-
-}
-.project-card:hover {
-    transform: translateY(-10px);
-
-     
-    box-shadow:0px 10px 20px #cfcae4;
-    padding-top:40px;
-
-
-}
-
-.project-card:hover > .project-contents{
-    
-      transform: translateY(-8px);
-      transition-timing-function: ease-in;
-      transition: 1s;      
-}
-.project-contents{
-    transition-timing-function: ease-in;
-    transition: 1s;      
-  
-}
-            }
-
-            @media screen and (min-device-width: 1440px) {
-            
-        .personal-description {
-    display: grid;
-    grid-template-columns: 20% 80%;
-    grid-template-areas: "icon text";
-}
-            }
-            </style>
-</head>
-<div class="container">
-  <div class="content">
-        <div class="header">
-        <a class="about" href="/">About</a>
-        <a class="posts" href="/posts/">Blog</a>
-    
-    </div> 
-      
-        <div class="title-text"> 
-          </div> 
-      
-      
-          <div class="details-text">
-              </div>
-              <br>
-              <p>
-      
-      
-      
-      
-              </p>
-              <p>
-      
-                  
-              </p>
-      <div class="plain-text">
-          
-
-
-<div class="personal-description">
-
-<div class="personal-description-icon">
- <?xml version="1.0" encoding="utf-8"?>
-          <!-- Generator: Adobe Illustrator 23.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-             viewBox="0 0 716 716" style="enable-background:new 0 0 716 716;" xml:space="preserve">
-          <style type="text/css">
-            .st0{fill:none;stroke:#FF0000;stroke-width:5;stroke-miterlimit:10;}
-            .st1{fill:#4E56C4;stroke:#FF0000;stroke-width:5;stroke-miterlimit:10;}
-            .st2{fill:#333333;}
-            .st3{fill:#474747;}
-            .st4{fill:#525252;}
-            .st5{fill:#A67C52;}
-            .st6{fill:#EB9271;}
-            .st7{fill:#FBB03B;}
-            .st8{fill:#FFBB91;}
-            .st9{fill:none;stroke:#EB9271;stroke-width:14.3573;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-            .st10{fill:none;stroke:#EB9271;stroke-width:11.8237;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-            .st11{fill:none;stroke:#FFBB91;stroke-width:17;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-            .st12{fill:none;stroke:#FFBB91;stroke-width:14;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-            .st13{fill:#666666;}
-            .st14{fill:#DECD78;}
-            .st15{fill:none;}
-            .st16{fill:#FF7BAC;}
-            .st17{fill:none;stroke:#1A1A1A;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
-            .st18{fill:none;stroke:#C1272D;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
-            .st19{fill:none;stroke:#C1272D;stroke-width:2.5242;stroke-linecap:round;stroke-miterlimit:10;}
-            .st20{fill:#C1272D;}
-            .st21{clip-path:url(#SVGID_2_);}
-            .st22{fill:#4B2F80;stroke:#4B2F80;stroke-miterlimit:10;}
-            .st23{fill:#B8652A;}
-            .st24{fill:#FF9B00;}
-            .st25{opacity:0.42;fill:#FFF4BF;}
-            .st26{fill:#FFDD33;}
-            .st27{opacity:0.25;fill:#4B2F80;stroke:#4B2F80;stroke-miterlimit:10;}
-          </style>
-          <g id="Layer_2">
-          </g>
-          <g id="Layer_3">
-          </g>
-          <g id="Layer_4">
+      <div class="main-info-icon">
+        <div class="svg-icon-container">
+          <svg
+            version="1.1"
+            id="Layer_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="02=px"
+            y="0px"
+            height="200px"
+            viewBox="0 0 334.609375 454.425293"
+            enable-background="new 0 0 334.609375 454.425293"
+            xml:space="preserve"
+          >
             <g>
-              <defs>
-                <circle id="SVGID_1_" cx="358" cy="358" r="358"/>
-              </defs>
-              <use xlink:href="#SVGID_1_"  style="overflow:visible;fill:#4E56C4;"/>
-              <clipPath id="SVGID_2_">
-                <use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
-              </clipPath>
-              <g class="st21">
-                <circle class="st22" cx="356.5" cy="358.5" r="358"/>
-                <path class="st2" d="M691,226c0,0,33-7,31,18s11,77,3,79s-32,16-39,12S691,226,691,226z"/>
-                <path class="st3" d="M712,233c0,0-42,28-18,98c-97,0-102-3-102-3s-10-66,19-95s111-7,105-3S712,233,712,233z"/>
-                <path class="st2" d="M572,357c0,0,105.98-45,132-45c11,0,22,4,22,4s26,8,15,44s-10,171,1,203c11.28,32.83-197,28-197,28
-                  S557,388,572,357z"/>
-                <path class="st4" d="M550,345c0,0-1-32,25-33s132,0,132,0s23,0,12,36s-22,177,1,203s-197,28-197,28S535,376,550,345z"/>
-                <rect x="-423" y="544" class="st23" width="1568" height="309"/>
-                <g>
-                  <path class="st6" d="M506.01,446.6l-45.17,66.56l-2.03,3c-3.35,4.94-8.45,8.07-13.88,9.12L320.39,549L311.61,513l121.47-36.28
-                    l-15.92,12.12l32.83-73.44L506.01,446.6z"/>
-                </g>
-                <path class="st24" d="M425,408c0,0,36,14,31,139h186c0,0,28-201-115-221S425,408,425,408z"/>
-                <g>
-                  <path class="st8" d="M635.87,440.56l3.98,102.76l0.1,2.62c0.52,13.37-9.9,24.63-23.27,25.15c-1.57,0.06-3.23-0.05-4.73-0.28
-                    l-182.71-28.92l4.51-36.79l184.29,16.08l-27.9,27.49l-18.02-101.24L635.87,440.56z"/>
-                </g>
-                <g>
-                  <path class="st6" d="M345.47,520.99c0,0-38.85-31.25-69.25-8.45c-30.4,22.8-20.69,24.91,40.96,24.07
-                    c8.78-0.12-1.81,13.26,3.38,12.67C351.84,545.74,345.47,520.99,345.47,520.99z"/>
-                  <path class="st9" d="M274.52,523.52c0,0-12.67,6.76-16.89,27.87"/>
-                  <path class="st9" d="M288.04,520.14c0,0-5.91,10.13-10.13,29.56"/>
-                  <path class="st9" d="M301.55,520.14c0,0-0.84,10.98-5.07,30.4"/>
-                  <path class="st10" d="M318.44,523.52c0,0-0.84,10.98-5.07,30.4"/>
-                </g>
-                <g>
-                  <path class="st8" d="M452.5,509.5c0,0-46-37-82-10S346,529,419,528c10.39-0.14-2.15,15.7,4,15
-                    C460.05,538.81,452.5,509.5,452.5,509.5z"/>
-                  <path class="st11" d="M368.5,512.5c0,0-15,8-20,33"/>
-                  <path class="st11" d="M384.5,508.5c0,0-7,12-12,35"/>
-                  <path class="st11" d="M400.5,508.5c0,0-1,13-6,36"/>
-                  <path class="st12" d="M420.5,512.5c0,0-1,13-6,36"/>
-                </g>
-                <rect x="268" y="551" class="st13" width="203" height="11"/>
-                <circle class="st6" cx="468" cy="389" r="28"/>
-                <path class="st2" d="M314.5,320.5c0,0-5,103,37,112s55-20,55-20s-62.86-112.3-81-109C314.5,305.5,314.5,320.5,314.5,320.5z"/>
-                <circle class="st8" cx="425" cy="322" r="91"/>
-                <g>
-                  <path class="st2" d="M517.52,431h-3.04c-13.52,0-24.48-10.96-24.48-24.48V345h52v61.52C542,420.04,531.04,431,517.52,431z"/>
-                </g>
-                <path class="st2" d="M353.5,246.5c0,0,29,85,150,101c39,1,38.5,0.5,38.5,0.5s-6-111-110.5-121.5
-                  C373.48,220.67,353.5,246.5,353.5,246.5z"/>
-                <path class="st2" d="M380.5,267.5c0,0-31,44-65,45c0,0,10.85-50.14,39.93-68.07S380.5,267.5,380.5,267.5z"/>
-                <ellipse class="st2" cx="381.5" cy="322.5" rx="6" ry="10"/>
-                <ellipse class="st2" cx="347.4" cy="325.67" rx="4.4" ry="7.33"/>
-                <path class="st16" d="M361.11,333.74l-3.73,11.94c-0.63,2.03,0.88,4.1,3.01,4.1h10.45c2.41,0,3.93-2.6,2.75-4.7l-6.72-11.94
-                  C365.52,330.73,361.94,331.1,361.11,333.74z"/>
-                <path class="st17" d="M357,367c0,0,17.5-4.5,31,0"/>
-                <path class="st18" d="M414.5,303.5c0,0-13-5-31-2s-20,8-19,15s9,29,32,24s25-10,25-15S419.5,306.5,414.5,303.5z"/>
-                <path class="st19" d="M357.5,314.5c0,0,1,30-7,30s-17-2.96-17-16c0-12-1-16,7-18S357.5,309.5,357.5,314.5z"/>
-                <path class="st18" d="M357.54,323.43c0,0,3.46-4.43,8.46-0.43"/>
-                <g>
-                  <path class="st20" d="M422.88,306.9l60.75,8.11c0.82,0.11,1.4,0.87,1.29,1.69c-0.1,0.77-0.78,1.32-1.54,1.3l-61.25-1.89
-                    c-2.55-0.08-4.56-2.21-4.48-4.77s2.21-4.56,4.77-4.48C422.56,306.86,422.73,306.88,422.88,306.9z"/>
-                </g>
-                <polygon class="st25" points="-15.98,261.16 96,560 457,560 -3.75,184.02             "/>
-                <polyline class="st26" points="225.5,370.5 275.5,561.5 20.5,561.5 -29.5,370.5 225.5,370.5           "/>
-                <path class="st27" d="M225.5,370.5l50,191h-255c0,0,71.8,3.47,145-53C235.5,454.5,225.5,370.5,225.5,370.5"/>
-                <path class="st27" d="M356.5,0.5C211.16,0.5,86.05,87.11,29.96,211.53l432.86,351.02l-403.18-3.88
-                  C123.98,653.89,232.93,716.5,356.5,716.5c78.99,0,152-25.58,211.2-68.91c89-65.13,146.8-170.36,146.8-289.09
-                  C714.5,160.78,554.22,0.5,356.5,0.5z"/>
-              </g>
+              <path
+                id="shirt"
+                class="torso"
+                fill="#FFFFFF"
+                stroke="#000000"
+                stroke-width="5.6186036"
+                d="M135.8930664,322.9916992
+            c0,0-36.8837891-3.8300781-50.8808594,28.3691406c-13.9960938,32.1992188-13.815918,97.6498047-13.815918,97.6498047
+            l180.0019531,2.6191406c0,0,20.2646484-128.3076172-53.9199219-128.6470703
+            C161.6283203,322.6698242,135.8930664,322.9916992,135.8930664,322.9916992z"
+              />
+              <path
+                id="neck"
+                class="torso"
+                fill="#FFFFFF"
+                stroke="#000000"
+                stroke-width="5.3140922"
+                d="M130.0957031,346.4438477l3.6874023-43.9746094
+            l60.9790039-53.9375c6.3330078,10.1845703,16.0751953,40.2011719,4.3837891,78.6802734
+            C187.3554688,365.8930664,148.2084961,356.1420898,130.0957031,346.4438477z"
+              />
+              <path
+                id="hair"
+                fill="#FFFFFF"
+                stroke="#000000"
+                stroke-width="5.3140922"
+                d="M7.6929688,151.9482422
+              C26.9238281-9.6070312,127.1831055-8.4052734,174.921875,12.453125
+              c130.4619141-51.4140625,157.0302734,132.1352539,157.0302734,160.6181641
+              c0,55.1333008-14.6460938,167.128418-67.0898438,171.6788086c-41.875,3.6197266-48.0039062-59.0322266-45.8330078-90.8720703
+              h-94.6913086c-8.9013672,30.9091797-31.4863281,93.4472656-50.6166992,96.3183594
+              C49.9072266,353.8823242-16.1201172,354.0161133,7.6929688,151.9482422z"
+              />
+              <path
+                id="head"
+                fill="#FFFFFF"
+                stroke="#000000"
+                stroke-width="5.3140922"
+                d="M301.0341797,182.9350586
+                c0.9306641,20.6917969-21.3886719,128.4677734-126.4755859,128.4677734
+                c-130.0620117,0-144.1005859-86.8398438-138.2988281-148.6606445"
+              />
+              <circle
+                id="left-eye"
+                class="eyes"
+                cx="101.9599609"
+                cy="188.8066406"
+                r="11.9311523"
+              />
+              <circle
+                id="right-eye"
+                class="eyes"
+                cx="201.8583984"
+                cy="188.8066406"
+                r="11.9311523"
+              />
+              <path
+                id="eyeglasses"
+                fill="none"
+                stroke="#000000"
+                stroke-width="5.3140922"
+                stroke-linecap="round"
+                d="M52.4833984,174.6602539
+            c-1.6719727,10.2290039,2.4174805,34.2753906,26.4370117,39.0576172
+            c30.0249023,5.9785156,46.2329102,5.6800781,63.1049805-36.0024414 M161.953125,169.9775391
+            c-2.3911133,17.4472656,5.0917969,48.0913086,54.6353516,48.0913086c29.3603516,0,53.6617188-41.6704102,48.668359-53.6713867
+            h-91.0039062"
+              />
+              <path
+                id="nose"
+                fill="none"
+                stroke="#000000"
+                stroke-width="5.3140922"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="
+            M161.6777344,207.418457c0-5.4462891-26.9692383-12.3613281-26.9692383,12.6210938
+            c0,16.6392578,22.0537109,16.6832031,36.6665039,8.3691406"
+              />
+              <path
+                id="mouth"
+                fill="none"
+                stroke="#000000"
+                stroke-width="5.3140922"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="
+            M145.8969727,255.6942383c9.0776367,7.2167969,32.3901367,15.615625,53.0083008-9.0351562"
+              />
+              <path
+                id="bangs"
+                fill="none"
+                stroke="#000000"
+                stroke-width="5.3141001"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="
+          M31.6415039,159.0083008c0,0,86.2895508,32.1640625,155.6700195-78.6019531
+          c8.2382812,28.4296875,44.1083984,62.0419922,44.1083984,62.0419922s33.4013672,24.6104492,73.6880859,40.3867188"
+              />
             </g>
-          </g>
           </svg>
-</div>
-
-<div class="personal-description-text">
-
-<div class="title-text">
-Hi, I'm Jenna.
-</div>
-<div class="details-text">
-<a href="https://twitter.com/jennayey">@jennayey</a>
-</div>
-
-<p>I&rsquo;m a front-end web developer, UX/UI designer and animator.
- <br>
-Manila, Philippines
-<br>
-<br>
- Say <a href="mailto:hello@jennayey.com">hi!</a>
- <br>
- View  my <a href="jennaleigh-angala-2019.pdf" download>resume.</a>
- <br>
-</div></p>
-
-<p></div>
-</div>
-<div class="margin-tb"> <br></div>
-<div class="project-group margin-tb">
-<div class="subtitle-text disabled-text">
-Games
-</div></p>
-
-<div class="project-grid margin-tb">
-
-<!-- project 1 -->
-<div class="project-card">
-<div class="project-contents">
-<div class="subtitle-text">
-Noli Me Tangere: The Game
-</div>
-
-<div class="plain-text margin-tb">
-College thesis project with Ariel Ray Cerezo. A Noli Me Tangere-inspired windows PC Game.
-</div>
- <div class="project-button games-button margin-tb">
-          <a class="plain-text" href="https://jennayey.itch.io/nolimetangere"> Download </a>
         </div>
-</div>
-</div>
-<!-- project 1 -->
-
-<!-- proj 2 -->
-<div class="project-card">
-<div class="project-contents">
-<div class="subtitle-text">
-Somber
-</div>
-
-<div class="plain-text margin-tb">
-The mini game project I created while I was learning the basics of Game Development with Unity3D
-</div>
- <div class="project-button games-button margin-tb">
-          <a class="plain-text" href="https://jennayey.itch.io/somber"> Download </a>
-        </div>
-</div>
-</div>
-
-<!-- proj 2 -->
-
-<p></div>
-<div class="margin-tb"> <br><br></div></p>
-
-<!-- UX/UI and Illustrations -->
-
-<div class="project-group margin-tb">
-<div class="subtitle-text disabled-text">
-UX/UI and Illustrations
-</div>
-
-<div class="project-grid margin-tb">
-
-<!-- project 1 -->
-<div class="project-card">
-<div class="project-contents">
-<div class="subtitle-text">
-Bahay Kubo App</div>
-
-<div class="plain-text margin-tb">
-Created over 200 Illustrations for the Tagalog Learning App</div>
- <div class="project-button ux-button margin-tb">
-          <a class="plain-text" href="https://play.google.com/store/apps/details?id=xyz.orangefix.bahaykubo2&hl=en"> Download the app </a>
-        </div>
-</div>
-</div>
-<!-- project 1 -->
-
-<!-- proj 2 -->
-<div class="project-card">
-<div class="project-contents">
-<div class="subtitle-text">
-Kaaram App</div>
-<div class="plain-text  margin-tb">
-Designed UX and UI for the Waray Learning App</div>
- <div class="project-button ux-button margin-tb">
-          <a class="plain-text" href="https://play.google.com/store/apps/details?id=xyz.orangefix.kaaram&hl=en"> Download the app </a>
-        </div>
-</div>
-</div>
-
-<!-- proj 2 -->
-
-<p></div></p>
-
-<div class="margin-tb"> <br><br></div>
-
-<!-- Animations -->
-
-<div class="project-group margin-tb">
-<div class="subtitle-text disabled-text">
-Animations and Video Editing
-
-</div>
-
-<div class="project-grid margin-tb">
-
-<!-- project 1 -->
-<div class="project-card">
-<div class="project-contents">
-<div class="subtitle-text">
-Rizal's Travels in Europe</div>
-
-<div class="plain-text margin-tb">
-A short animation project for our Life and Works of Rizal class.</div>
- <div class="project-button anim-button margin-tb">
-          <a class="plain-text" href="https://youtu.be/-blhGUAP8qg"> Watch it </a>
-        </div>
-</div>
-</div>
-<!-- project 1 -->
-
-<!-- proj 2 -->
-<div class="project-card">
-<div class="project-contents">
-<div class="subtitle-text">
-Siklo -  Animation</div>
-
-<div class="plain-text margin-tb">
-A short motion graphic animation I made during my internship at Knowledge Channel Foundation</div>
- <div class="project-button anim-button margin-tb">
-          <a class="plain-text" href="https://youtu.be/pCFwmy1Pr4A"> Watch it </a>
-        </div>
-</div>
-</div>
-
-<!-- proj 2 -->
-
-<!-- proj 3 -->
-
-<div class="project-card">
-<div class="project-contents">
-<div class="subtitle-text">
-Koko's Adventure</div>
-
-<div class="plain-text margin-tb">
-My team's project for our Animation Design and Production class.</div>
- <div class="project-button anim-button margin-tb">
-          <a class="plain-text" href="https://youtu.be/GwYMY-3zqm0"> Watch it </a>
-        </div>
-</div>
-</div>
-
-<!-- proj 3 -->
-
-<!-- proj 2 -->
-
-<div class="project-card">
-<div class="project-contents">
-<div class="subtitle-text">
-Walk Cycle</div>
-
-<div class="plain-text margin-tb">
-A mini animation practice of a walk cycle.</div>
- <div class="project-button anim-button margin-tb">
-          <a class="plain-text" href="https://www.instagram.com/p/Bm6VbrLDLTW/"> Watch it </a>
-        </div>
-</div>
-</div>
-
-<!-- proj 2 -->
-
-<!-- proj 2 -->
-
-<div class="project-card">
-<div class="project-contents">
-<div class="subtitle-text">
-View more</div>
-
-<div class="plain-text margin-tb">
-View more of my animation projects at my YouTube channel.</div>
- <div class="project-button anim-button margin-tb">
-          <a class="plain-text" href="https://www.youtube.com/playlist?list=PLQ5quB3QCl0G8v5xI_Wle2FxxrAf5_qaO"> Go to YouTube  </a>
-        </div>
-</div>
-</div>
-
-<!-- proj 2 -->
-
-<p></div></p>
-
-
-
-</div>
-        
-      
-  </div>
-    <div class="footer">
-
-            © Jennaleigh C. Angala, 2020
-    
+      </div>
     </div>
+    <h4 id="projectsTitle">Projects</h4>
+    <div class="projects-div">
     
-</div>
+      <div class="project">
+        <h3>Noli Me Tangere</h3>
+        <p>
+          College thesis project with Ariel Ray Cerezo. A Noli Me
+          Tangere-inspired windows PC Game.
+        </p>
+        <div class="button-container">
+          <a href="https://jennayey.itch.io/nolimetangere" class="tertiary-button">            <div>
+              <h5>View project</h5>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="project">
+        <h3>Somber</h3>
+        <p>
+        A mini survival game made in Unity3D</p>
+        <div class="button-container">
+          <a href="https://jennayey.itch.io/somber" class="tertiary-button">            <div>
+              <h5>View project</h5>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="project">
+        <h3>Motion Graphics</h3>
+        <p>
+        A collection of my animation projects</p>
+        <div class="button-container">
+          <a href="https://www.youtube.com/playlist?list=PLQ5quB3QCl0G8v5xI_Wle2FxxrAf5_qaO" class="tertiary-button">            <div>
+              <h5>View project</h5>
+            </div>
+          </a>
+        </div>
+      </div>
+     
+      
+     
+    </div>
+
+    <script>
+   
+
+   var tl = gsap.timeline({ paused: false });
+
+      tl.addLabel("delayTime", "+=2.5");
+      tl.from(
+        "#myName",
+        { duration: 1, x: 200, ease: "expo.out", opacity: 0 },
+        ".5"
+      );
+
+      tl.from(
+        "#myDescription",
+        { duration: 1, y: 200, ease: "expo.out", opacity: 0 },
+        ".6"
+      );
+      tl.from(
+        "#talk-button",
+        { duration: 1, x: 200, ease: "expo.out", opacity: 0 },
+        ".7"
+      );
+
+      tl.from(
+        "#cv-button",
+        { duration: 1, y: 200, ease: "expo.out", opacity: 0 },
+        ".8"
+      );
+
+      tl.from(
+        ".svg-icon-container",
+        { duration: 1, scale: 0, ease: "expo.out", opacity: 1 },
+        "1"
+      );
+      tl.from(
+        ".torso",
+        { duration: 0.6, y: 410, ease: "back", opacity: 1 },
+        "delayTime+=0.03"
+      );
+      tl.from(
+        "#head",
+        { duration: 0.6, y: 410, ease: "back", opacity: 1 },
+        "delayTime+=0.05"
+      );
+      tl.from(
+        ".eyes",
+        { duration: 0.6, y: 410, ease: "back", opacity: 1 },
+        "delayTime+=0.06"
+      );
+      tl.from(
+        "#eyeglasses",
+        { duration: 0.6, y: 410, ease: "back", opacity: 1 },
+        "delayTime+=0.07"
+      );
+
+      tl.from(
+        "#nose, #mouth",
+        { duration: 0.6, y: 410, ease: "back", opacity: 1 },
+        "delayTime+=0.08"
+      );
+      tl.from(
+        "#hair",
+        { duration: 0.6, y: 410, ease: "back", opacity: 1 },
+        "delayTime+=0.1"
+      );
+      tl.from(
+        "#bangs",
+        { duration: 0.6, y: 410, ease: "back", opacity: 1 },
+        "delayTime+=.08"
+      );
 
 
-</body>
+      tl.from(
+        ".project",
+        { duration: 0.6, x: 410, ease: "back", opacity: 0 },
+        "delayTime+=1.5"
+      );
+
+      tl.from(
+        "#projectsTitle",
+        { duration: 0.6, x: 210, ease: "expo.out", opacity: 0 },
+        "delayTime+=1.5"
+      );
+    </script>
+    <footer>
+      © Jennaleigh C. Angala, 2020    </footer>
+  </body>
 </html>
