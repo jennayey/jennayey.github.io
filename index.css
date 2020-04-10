@@ -340,8 +340,8 @@ margin-bottom: 20px;
 .svg-icon-container {
   margin:auto;
   overflow: hidden;
-  width: 200px;
-  height: 200px;
+  width: 175px;
+  height: 175px;
   background-color: gray;
   border: 3px;
   border-style: solid;
@@ -350,8 +350,8 @@ margin-bottom: 20px;
 }
 
 svg {
-  width: 200px;
-  height: 200px;
+  width: 175px;
+  height:175px;
   position: relative;
   top: 20px !important;
   overflow: visible;
@@ -480,8 +480,8 @@ margin-bottom: 20px;
 .svg-icon-container {
   margin:auto;
   overflow: hidden;
-  width: 200px;
-  height: 200px;
+  width:175px;
+  height: 175px;
   background-color: gray;
   border: 3px;
   border-style: solid;
@@ -490,8 +490,8 @@ margin-bottom: 20px;
 }
 
 svg {
-  width: 200px;
-  height: 200px;
+  width: 175px;
+  height:175px;
   position: relative;
   top: 20px !important;
   overflow: visible;
