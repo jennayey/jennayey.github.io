@@ -525,7 +525,7 @@ margin-right: 0px;
 .button-container{
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
 
