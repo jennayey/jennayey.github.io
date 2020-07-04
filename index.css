@@ -117,8 +117,8 @@ transition-duration: .5s;
 .primary-button h5:hover {
   transition-timing-function: ease-out;
 transition-duration: .5s;
-background-color: #fc7405;
-border-color: #fc7405;
+background-color: #810303;
+border-color:#810303;
 transform: translateY(-5px);
 
 }
@@ -135,8 +135,8 @@ transform: translateY(-5px);
 .secondary-button h5:hover{
   transition-timing-function: ease-out;
   transition-duration: .5s;
-  border-color: #fc7405;
-  color: #fc7405;
+  border-color: #810303;
+  color: #810303;
   transform: translateY(-5px);
 
 }
