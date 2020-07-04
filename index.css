@@ -2,15 +2,19 @@
 * {
   margin: 0;
 }
+
+html {
+  overflow-x: hidden !important;
+
+}
 body {
   padding-top: 100px;
-  width: 70vw;
+  width: 70%;
   margin: auto;
   /* background-color: rgb(239, 245, 247); */
   background-color: #fff;
   font-family: "Ubuntu";
   color: rgb(18, 13, 75);
-  overflow-x: hidden;
 
   
 }
@@ -267,7 +271,7 @@ and (-webkit-min-device-pixel-ratio: 1) {
 
   body {
     padding-top: 50px;
-    width: 85vw;
+    width: 90%;
     margin: auto;
     /* background-color: rgb(239, 245, 247); */
     background-color: #fff;
@@ -408,7 +412,7 @@ and (-webkit-min-device-pixel-ratio: 1) {
 
   body {
     padding-top: 50px;
-    width: 85vw;
+    width: 90%;
     margin: auto;
     /* background-color: rgb(239, 245, 247); */
     background-color: #fff;
